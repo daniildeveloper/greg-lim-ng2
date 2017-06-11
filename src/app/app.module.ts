@@ -1,3 +1,4 @@
+import { AdwertismentComponent } from './adwerisment/ads.component';
 import { ProductComponent } from './products/products.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -14,7 +15,8 @@ import { AppComponent } from './app.component';
 @NgModule({
   declarations: [
     AppComponent,
-    ProductComponent
+    ProductComponent,
+    AdwertismentComponent
   ],
   imports: [
     BrowserModule,
