@@ -1,3 +1,4 @@
+import { RatingComponent } from './rating/rating.component';
 import { AdwertismentComponent } from './adwerisment/ads.component';
 import { ProductComponent } from './products/products.component';
 import { BrowserModule } from '@angular/platform-browser';
@@ -16,7 +17,8 @@ import { AppComponent } from './app.component';
   declarations: [
     AppComponent,
     ProductComponent,
-    AdwertismentComponent
+    AdwertismentComponent,
+    RatingComponent
   ],
   imports: [
     BrowserModule,
