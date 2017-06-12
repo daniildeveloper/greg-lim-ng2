@@ -11,6 +11,7 @@ import { Component } from '@angular/core';
 })
 export class ProductComponent {
     products;
+    imgUrl = 'assets/buddha.png';
 
     /**
      * use dependency injection
@@ -18,5 +19,12 @@ export class ProductComponent {
      */
     constructor(productService: ProductService) {
         this.products = productService.getProducts();
+    }
+
+    /**
+     * make log
+     */
+    logMaker() {
+        console.log('It is some log');
     }
 }
