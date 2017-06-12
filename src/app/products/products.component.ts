@@ -10,6 +10,7 @@ import { Component } from '@angular/core';
     providers: [ProductService]
 })
 export class ProductComponent {
+    title = 'hero';
     products;
     imgUrl = 'assets/buddha.png';
 
