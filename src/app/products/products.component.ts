@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
  * Products
  */
 @Component({
-    selector: 'products',
+    selector: 'app-products',
     templateUrl: './products.component.html',
     providers: [ProductService]
 })
