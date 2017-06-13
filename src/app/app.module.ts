@@ -8,6 +8,7 @@ import { HttpModule } from '@angular/http';
 import { SingleProductComponent } from './singleproduct/singleproduct.component';
 
 import { AppComponent } from './app.component';
+import { UserFormComponent } from './user-form/user-form.component';
 
 /**
  * Entry point to application
@@ -20,7 +21,8 @@ import { AppComponent } from './app.component';
     ProductComponent,
     AdwertismentComponent,
     RatingComponent,
-    SingleProductComponent
+    SingleProductComponent,
+    UserFormComponent
 
   ],
   imports: [
