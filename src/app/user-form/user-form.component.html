@@ -6,14 +6,29 @@
     <div class="form-group">
       <label for="firstName">First name</label>
       <!--Two way data binding-->
-      <input type="text" id="firstName" class="form-control" [(ngModel)]="model.firstName" name="firstName" > 
+      <input type="text" id="firstName" class="form-control" [(ngModel)]="model.firstName" name="firstName" #firstName="ngModel">
+
+      <!--alert message -->
+      <div class="alert alert-danger" *ngIf="firstName.touched && !firstName.valid">
+        First name is required
+      </div>
+
+      <div *ngIf="firstName.errors.minlength" class="alert alert-danger" >
+        First name should be minimum 3 characters
+      </div>
     </div>
+
     <!--end name-->
 
     <!--email-->
     <div class="form-group">
       <label for="email">Email</label>
-      <input type="email" class="form-control" id="email" [(ngModel)]="model.email" name='email' >
+      <input type="email" class="form-control" id="email" [(ngModel)]="model.email" name='email' #email="ngModel">
+
+      <div class="alert alert-danger" **ngIf="email.touched && !email.valid" >
+        Email is required
+      </div>
+      <!--in this part dont show some messages for country whiile it optional is-->
     </div>
     <!--end email-->
 
