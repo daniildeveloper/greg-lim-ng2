@@ -1,0 +1,18 @@
+<!-- apply the directive formGroup and bind it to `form` variable -->
+<form [formGroup]="form" class="container" (ngSubmit)="login()" >
+  <div class="form-group">
+    <label for="#username">Username: </label>
+    <input type="text" class="form-control" id="username" formControlName="username">
+    <div class="alert alert-danger" *ngIf="form.controls.username.touched && !form.controls.username.valid">
+      Username is required
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="#password">Password: </label>
+    <input type="password" class="form-control" id="password" formControlName="password">
+    <div class="alert alert-danger" *ngIf="form.controls.password.touched && !form.controls.password.valid">
+      Password required
+    </div>
+  </div>
+  <button class="btn btn-primary" type="submit">Login</button>
+</form>

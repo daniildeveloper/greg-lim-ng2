@@ -9,6 +9,9 @@ import { SingleProductComponent } from './singleproduct/singleproduct.component'
 
 import { AppComponent } from './app.component';
 import { UserFormComponent } from './user-form/user-form.component';
+import { LoginFormComponent } from './login-form/login-form.component';
+
+import {ReactiveFormsModule} from '@angular/forms';
 
 /**
  * Entry point to application
@@ -22,13 +25,15 @@ import { UserFormComponent } from './user-form/user-form.component';
     AdwertismentComponent,
     RatingComponent,
     SingleProductComponent,
-    UserFormComponent
+    UserFormComponent,
+    LoginFormComponent
 
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
