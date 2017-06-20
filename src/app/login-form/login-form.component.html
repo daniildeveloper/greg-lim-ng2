@@ -15,7 +15,9 @@
     </div>
     <div class="alert alert-danger" *ngIf="form.controls.password.errors.cannotContainSpace">
       Password cannot contain space.
-
+    </div>
+    <div class="alert alert-danger" *ngIf="form.controls.password.errors.invalidLogin">
+      Username or password is invalid
     </div>
   </div>
   <button class="btn btn-primary" type="submit">Login</button>

@@ -1,6 +1,8 @@
+import { LoginService } from './login.service';
 import { PasswordValidator } from './passwordValidator';
 
 import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
+
 import { Component, OnInit } from '@angular/core';
 
 
@@ -28,7 +30,7 @@ export class LoginFormComponent implements OnInit {
   /**
    * form using form builder
    */
-  constructor(fb: FormBuilder) {
+  constructor(fb: FormBuilder, private _loginService: LoginService) {
     this.form = fb.group({
       username: ['', Validators.required],
       password: ['', Validators.required, PasswordValidator.cannotContainSpace]
@@ -43,6 +45,15 @@ export class LoginFormComponent implements OnInit {
    */
   login() {
     console.log(this.form.value);
+    let result = this._loginService.login(
+      this.form.controls['username'],
+      this.form.controls['password']
+    );
+    if (!result) {
+      this.form.controls['password'].setErrors({
+        invalidLogin: true
+      });
+    }
   }
 
 }
