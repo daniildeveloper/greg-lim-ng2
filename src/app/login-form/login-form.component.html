@@ -1,5 +1,5 @@
 <!-- apply the directive formGroup and bind it to `form` variable -->
-<form [formGroup]="form" class="container" (ngSubmit)="login()" >
+<form [formGroup]="form" class="container" (ngSubmit)="login()">
   <div class="form-group">
     <label for="#username">Username: </label>
     <input type="text" class="form-control" id="username" formControlName="username">
@@ -12,6 +12,10 @@
     <input type="password" class="form-control" id="password" formControlName="password">
     <div class="alert alert-danger" *ngIf="form.controls.password.touched && !form.controls.password.valid">
       Password required
+    </div>
+    <div class="alert alert-danger" *ngIf="form.controls.password.errors.cannotContainSpace">
+      Password cannot contain space.
+
     </div>
   </div>
   <button class="btn btn-primary" type="submit">Login</button>

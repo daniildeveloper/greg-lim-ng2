@@ -1,5 +1,8 @@
+import { PasswordValidator } from './passwordValidator';
+
 import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-login-form',
@@ -28,7 +31,7 @@ export class LoginFormComponent implements OnInit {
   constructor(fb: FormBuilder) {
     this.form = fb.group({
       username: ['', Validators.required],
-      password: ['', Validators.required]
+      password: ['', Validators.required, PasswordValidator.cannotContainSpace]
     });
   }
 
