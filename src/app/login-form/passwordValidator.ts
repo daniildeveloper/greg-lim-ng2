@@ -8,8 +8,10 @@ export class PasswordValidator {
         if (formControl.value.indexOf(' ') >= 0) {
             return {
                 cannotContainSpace: true
-            }
+            };
         }
-        return null;
+        return {
+            cannotContainSpace: false
+        };
     }
 }

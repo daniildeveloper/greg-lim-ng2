@@ -10,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-login-form',
   templateUrl: './login-form.component.html',
   styleUrls: ['./login-form.component.css'],
-  providers: [LoginService]
+  providers: [LoginService, PasswordValidator]
 })
 export class LoginFormComponent implements OnInit {
 
@@ -34,7 +34,7 @@ export class LoginFormComponent implements OnInit {
   constructor(fb: FormBuilder, private _loginService: LoginService) {
     this.form = fb.group({
       username: ['', Validators.required],
-      password: ['', Validators.required, PasswordValidator.cannotContainSpace]
+      password: ['', Validators.compose([Validators.required, PasswordValidator.cannotContainSpace])]
     });
   }
 
