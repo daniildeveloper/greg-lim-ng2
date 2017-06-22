@@ -1,15 +1,23 @@
+import { SpotifyService } from './spotify.service';
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs/Rx';
 
 @Component({
   selector: 'app-spotify',
   templateUrl: './spotify.component.html',
-  styleUrls: ['./spotify.component.css']
+  styleUrls: ['./spotify.component.css'],
+  providers: [SpotifyService]
 })
 export class SpotifyComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _spotifyService: SpotifyService) {
+
+  }
 
   ngOnInit() {
+    this._spotifyService
+      .getSpotifyData()
+      .subscribe(data => console.log(data));
   }
 
 }
