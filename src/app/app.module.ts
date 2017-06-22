@@ -13,6 +13,7 @@ import { LoginFormComponent } from './login-form/login-form.component';
 
 import {ReactiveFormsModule} from '@angular/forms';
 import { ObservComponent } from './observ/observ.component';
+import { SpotifyComponent } from './spotify/spotify.component';
 
 /**
  * Entry point to application
@@ -28,7 +29,8 @@ import { ObservComponent } from './observ/observ.component';
     SingleProductComponent,
     UserFormComponent,
     LoginFormComponent,
-    ObservComponent
+    ObservComponent,
+    SpotifyComponent
 
   ],
   imports: [
