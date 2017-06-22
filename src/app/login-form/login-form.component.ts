@@ -9,7 +9,8 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-login-form',
   templateUrl: './login-form.component.html',
-  styleUrls: ['./login-form.component.css']
+  styleUrls: ['./login-form.component.css'],
+  providers: [LoginService]
 })
 export class LoginFormComponent implements OnInit {
 

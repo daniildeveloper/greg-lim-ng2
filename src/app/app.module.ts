@@ -12,6 +12,7 @@ import { UserFormComponent } from './user-form/user-form.component';
 import { LoginFormComponent } from './login-form/login-form.component';
 
 import {ReactiveFormsModule} from '@angular/forms';
+import { ObservComponent } from './observ/observ.component';
 
 /**
  * Entry point to application
@@ -26,7 +27,8 @@ import {ReactiveFormsModule} from '@angular/forms';
     RatingComponent,
     SingleProductComponent,
     UserFormComponent,
-    LoginFormComponent
+    LoginFormComponent,
+    ObservComponent
 
   ],
   imports: [
