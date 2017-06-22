@@ -9,6 +9,7 @@ import { Observable } from 'rxjs/Rx';
   providers: [SpotifyService]
 })
 export class SpotifyComponent implements OnInit {
+  isLoading = true;
 
   constructor(private _spotifyService: SpotifyService) {
 
@@ -17,7 +18,11 @@ export class SpotifyComponent implements OnInit {
   ngOnInit() {
     this._spotifyService
       .getSpotifyData()
-      .subscribe(data => console.log(data));
+      .subscribe(data => {
+        console.log(data);
+        this.isLoading = false;
+      });
+
   }
 
 }

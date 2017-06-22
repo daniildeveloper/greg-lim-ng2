@@ -1,3 +1,7 @@
-<p>
-  spotify works!
-</p>
+<div *ngIf="isLoading">
+  Getting data ...
+</div>
+
+<div *ngIf="!isLoading">
+  Spotify
+</div>
