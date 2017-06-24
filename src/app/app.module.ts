@@ -19,6 +19,7 @@ import { NotfoundComponent } from './notfound/notfound.component';
 // routing
 import { routing } from './app.routing';
 import { NavbarComponent } from './navbar/navbar.component';
+import { UserformComponent } from './userform/userform.component';
 
 /**
  * Entry point to application
@@ -37,7 +38,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     ObservComponent,
     SpotifyComponent,
     NotfoundComponent,
-    NavbarComponent
+    NavbarComponent,
+    UserformComponent
 
   ],
   imports: [
