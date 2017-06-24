@@ -11,9 +11,13 @@ import { AppComponent } from './app.component';
 import { UserFormComponent } from './user-form/user-form.component';
 import { LoginFormComponent } from './login-form/login-form.component';
 
-import {ReactiveFormsModule} from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { ObservComponent } from './observ/observ.component';
 import { SpotifyComponent } from './spotify/spotify.component';
+import { NotfoundComponent } from './notfound/notfound.component';
+
+// routing
+import { routing } from './app.routing';
 
 /**
  * Entry point to application
@@ -30,14 +34,16 @@ import { SpotifyComponent } from './spotify/spotify.component';
     UserFormComponent,
     LoginFormComponent,
     ObservComponent,
-    SpotifyComponent
+    SpotifyComponent,
+    NotfoundComponent
 
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    routing,
   ],
   providers: [],
   bootstrap: [AppComponent]
